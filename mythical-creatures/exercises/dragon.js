@@ -7,13 +7,13 @@ class Dragon {
     }
     this.hungry = hungry;
     this.timesEaten = timesEaten;
-    this.eat = function eat() {
-      if (this.timesEaten <= 2) {
-        this.timesEaten = this.timesEaten + 1;
-      }
-      if (this.timesEaten >= 3) {
-        this.hungry = false;
-      }
+  }
+  eat() {
+    if (this.timesEaten <= 2) {
+      this.timesEaten = this.timesEaten + 1;
+    }
+    if (this.timesEaten >= 3) {
+      this.hungry = false;
     }
   }
 }
