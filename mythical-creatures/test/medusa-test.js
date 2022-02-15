@@ -101,10 +101,10 @@ describe('Medusa', function() {
     medusa.gazeAtVictim(victim1);
     medusa.gazeAtVictim(victim2);
     medusa.gazeAtVictim(victim3);
-    //console.log(medusa.statues)
+
     var person = medusa.gazeAtVictim(victim4);
-    //console.log(medusa.statues)
-    console.log(person)
+
+
     assert.instanceOf(person, Person);
     assert.equal(person.name, 'Pam');
   });
