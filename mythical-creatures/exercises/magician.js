@@ -1,14 +1,11 @@
+
 class Magician {
   constructor(magician) {
-    class Magician {
-    }
     this.name = `The Great ${magician.name}`;
     this.assistant = magician.assistant;
-    this.favoriteAccessory = magician.clothing;
+    this.favoriteAccessory = magician.clothing || "top hat";
     this.confidencePercentage = 10;
-    if (this.favoriteAccessory === undefined) {
-      this.favoriteAccessory = "top hat";
-    }
+
   }
   performIncantation(spell) {
     return (`${spell.toUpperCase()}!`);
