@@ -5,6 +5,8 @@ class Fairy{
     this.clothes = {
       dresses: ['Iris'],
     }
+    this.disposition = "Good natured";
+    this.humanWards = [];
   }
 
   receiveBelief(){
@@ -18,6 +20,22 @@ class Fairy{
   makeDresses(dresses){
     for (var i = 0; i < dresses.length; i++){
       this.clothes.dresses.push(dresses[i]);
+    }
+  }
+
+  becomeProvoked(){
+    this.disposition = "Vengeful";
+  }
+
+  replaceInfant(infant){
+    if (this.disposition === "Vengeful"){
+      infant.disposition = "Malicious";
+      this.humanWards.push(infant);
+    } else {
+      return infant;
+    }
+    if (this.humanWards.length === 3){
+      this.disposition = "Good natured";
     }
   }
 }
